@@ -1,0 +1,95 @@
+
+*{ margin: 0; padding: 0; list-style: none;}
+html {
+    height: 100%;
+    overflow-y: scroll;
+}
+.opacity{filter:alpha(opacity=50); -moz-opacity:0.5; -khtml-opacity: 0.5; opacity: 0.5; }
+
+h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+address, cite, dfn, em, var, i {
+    font-style: normal;
+}
+
+
+ul, ol {
+    list-style: none;
+}
+
+
+
+
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+*:focus {
+    outline: 0;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.tright {
+    text-align: right;
+}
+.tcenter {
+    text-align: center;
+}
+.hide {
+    display: none;
+}
+.inlineBlock {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+.inline {
+    display: inline;
+}
+button {
+    cursor: pointer;
+}
+.block, article, aside, canvas, details, figcaption, figure, footer,
+header, hgroup, menu, nav, section, summary {
+    display: block;
+}
+.clearfix:after {
+    content: '\20';
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+.clear {
+    clear: both;
+    overflow: hidden;
+    float: left;
+}

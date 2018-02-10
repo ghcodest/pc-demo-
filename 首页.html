@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>菲特云</title>
+		<link rel="stylesheet" href="css/public.css" />
+		<!--<link rel="stylesheet" type="text/css" href="css/video.css"/>
+		<script src="js/video.js"></script>-->
+		<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+		<script src="http://vjs.zencdn.net/c/video.js"></script>
+		<style type="text/css">
+		*{ padding: 0; margin: 0; list-style: none;text-decoration: none; font-family: "微软雅黑"}
+			.main{ min-width: 1180px; width: 100%;  }
+			.header{  margin: 0 auto;  }
+			.header_top{ background-color: #105b9f; height: 80px; width: 100%;}
+			.header_top_center{ width: 1200px; margin: auto;}
+			.header_left{width: 24%; max-width: 240px; float: left; }
+			.header_left img { margin-top: 12px; margin-left:60px;}
+			.header_right{width: 75%; float: right;}
+			.header_right .nav{ width: 80%; float: left;}
+			.header_right .nav ul li{ float: left; padding:0 15px; margin-top: 50px; }
+			.header_right .nav ul li a{ color: #fff; font-size: 14px; }
+			.header_right .nav ul li a:hover{color: #ccc;}
+			.header_right .header_login{ width: 20%; float: right; text-align: right;}
+			.header_right .header_login a{ margin:0 10px; margin-top: 50px; display: inline-block; width: 50px; height: 24px; text-align: center;  line-height:24px; border-radius: 3px; background-color: #FFFFFF; color: #105b9f; font-size: 14px }
+			.header_right .header_login a:hover{ background-color: #efefef;}
+			.header_bot{ background-color: #084274; height: 38px; text-align: center; height: 393px;}
+			.header_bot_img{width: 1200px; text-align: center; margin: auto; position: relative;}
+			.header_bot_img_img{width: 1200px; height: 49px; margin: auto;}
+			.header_bot_nav{ position: absolute; top: 10px; left: 50px;z-index: 1;}
+			.header_bot_nav ul li a img{ margin-right: 3px; position: relative; top: 1px;}
+			.header_bot_nav ul li{  float: left; padding:0 15px;}
+			.header_bot_nav ul li a{ color: #FFFFFF; font-size: 14px}
+			.header_bot_nav ul li a:hover{color: #ccc;}
+			.header_bot_img_img2{ width: 100%; height: 360px; position: absolute;top: 115px; left: 0;}
+			
+			/*搜索*/
+			.search_all{position:absolute ; top: 130px; left: 0; width: 1200px; margin: auto;}
+			.search_all_con{ width: 555px; margin: 0 auto;}
+			.search_title{ font-size: 48px; color: #FFFFFF; margin-bottom: 35px;}
+			.search_input{ width: 430px; height: 30px; padding: 5px; line-height: 40px; border: 0; float: left;}
+			.search_but{ width: 100px; font-size: 16px; height: 40px; line-height: 40px; color: #FFFFFF; background-color: #0071f0; float: left; border: 0; text-align: center;}
+			.hot_ci{ margin: 15px 0;}
+			.hot_ci p{color: #fff!important; text-align: left!important; margin: 10px 0; font-size: 14px}
+			.hot_ci p a{ color: #FFFFFF; font-size: 14px; margin-right: 10px;}
+			.hot_ci p a:hover{ color: #0071F0; }
+			.lun_li span{ float: left; color: #FFFFFF; margin-right: 5px; font-size: 14px}
+			.lun_li ul{ float: left;text-align: left; overflow:hidden;}
+			.lun_li ul li a{ color: #fff;}
+			.lun_li ul li a:hover{ color: #0071F0; }
+			#marquee5{height:25px;overflow:hidden;}
+			#marquee5 ul li{height:25px; font-size: 14px; line-height:20px;overflow:hidden;}
+
+		</style>
+		
+	</head>
+	<body>
+		
+		<div class="main">
+			<!--头部开始-->
+			<div class="header">
+				<div class="header_top" >
+					<div class="header_top_center">
+						<div class="header_left">
+							<img  src="img/logo_fityun.png"/>
+						</div>
+						<div class="header_right">
+							<div class="nav">
+								<ul>
+									<li><a href="#">首页</a></li>
+									<li><a href="#">体育场馆</a></li>
+									<li><a href="#">瑜伽馆</a></li>
+									<li><a href="#">健身房私教</a></li>
+									<li><a href="#">网/羽球馆</a></li>
+									<li><a href="#">联系我们</a></li>
+								</ul>
+							</div>
+							<div class="header_login">
+								<a href="#">登录</a>
+								<a href="#">注册</a>
+							</div>
+						</div>	
+					</div>
+					
+				</div>
+				<!--头部底部开始-->
+				<div class="header_bot">
+					<img class="header_bot_img_img2"  src="img/header_img2.jpg" />
+					<div class="header_bot_img" >
+						<img class="header_bot_img_img"  src="img/header_img1.png" />
+						<div class="header_bot_nav">
+							<ul>
+								<li><a href="#"><img src="img/header_bot_img1.png">首页</a></li>
+								<li><a href="#"><img src="img/header_bot_img2.png">视频</a></li>
+								<li><a href="#"><img src="img/header_bot_img3.png">文章</a></li>
+								<li><a href="#"><img src="img/header_bot_img4.png">问答</a></li>
+							</ul>
+						</div>
+						
+						<!--搜索部分-->
+						<div class="search_all">
+							<div class="search_all_con">
+								<p class="search_title">教程与帮助</p>
+								<div class="search_input_all">
+									<input type="text" class="search_input" placeholder="请输入关键字或者问题名称" />
+									<input type="button" class="search_but" value="搜索" />
+									<div class="clearfix"></div>
+								</div>
+								<div class="hot_ci">
+									<p>搜索热词： <a href="#">短信耗尽</a><a href="#">如何充值</a><a href="#">当前活动</a><a href="#">在线教程</a><a href="#代理加盟"></a></p>
+									<div class="lun_li">
+										<span>常见问题：</span>
+										<div id="marquee5">
+											<ul>
+												<li><a href="#">怎么给会员发卡</a></li>
+												<li><a href="#">s会员发卡</a></li>
+												<li><a href="#">怎s给会员发卡</a></li>
+												<li><a href="#">怎s给会员发卡</a></li>
+												<li><a href="#">s么给会员发卡</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--搜索部分结束-->
+					</div>
+				</div>
+				<!--头部底部结束-->
+			</div>
+			<!--头部结束-->
+		
+			<style type="text/css">
+				.body_all{ width: 1200px; margin: 10px auto; }
+				.body_one{ float: left; overflow: hidden;  }
+				.body_left{ width: 31%; margin-right: 2%;}
+				.body_center{ width: 37%;}
+				.body_right{width: 25%; margin-left: 2%; }
+				
+				
+				.p1{ text-align: center; line-height: 31px; color: #FFFFFF; display: inline-block; width: 114px!important; height: 31px; background-image: url(img/body_img1.png); background-repeat: no-repeat;}
+				
+				.ul{ margin-top: 15px;}
+				.ul li{ padding: 5px 0;}
+				.ul li span{ display: inline-block;font-size: 14px; width: 40px; margin-right: 5px; height: 20px; position: relative;top: -4px; background-color: #258ee7; text-align: center; line-height: 20px; color: #FFFFFF;}
+				.ul li em{ font-style: normal; font-size: 14px; white-space: nowrap; width: 225px; overflow: hidden; text-overflow: ellipsis; display: inline-block; }
+				.ul li i{ font-style: normal;font-size: 14px; float: right; display: inline-block;}
+				.ul li a{ color: #000;}
+				.ul li a:hover{ color: #258ee7;}
+				
+				.p2 span{ width: 2px; position: relative;top: 5px; height: 20px; display: inline-block; background-color: #e72847; margin-right: 20px;}
+				.p2 { margin-top: 5px; font-size: 18px; color: #333333; padding: 10px 0; border-bottom: #c1c1c1 solid 1px;}
+			</style>
+			<!--body start-->
+			<div class="body_all">
+				<div class="body_context">
+					<div class="body_one body_left">
+						<p class="p1">文章精选</p>
+						<ul class="ul">
+							<li><a href="#"><span>教程</span><em>菲特云瑜伽运营管理系统的正确使用方法</em><i>2016.01.01</i></a></li>
+							<li><a href="#"><span>视频</span><em>菲特云瑜伽运营管理系统的正确使用方法</em><i>2016.01.01</i></a></li>
+							<li><a href="#"><span>营销</span><em>菲特云瑜伽运营管理系统的正确使用方法</em><i>2016.01.01</i></a></li>
+							<li><a href="#"><span>学习</span><em>菲特云瑜伽运营管理系统的正确使用方法</em><i>2016.01.01</i></a></li>
+							<li><a href="#"><span>精选</span><em>菲特云瑜伽运营管理系统的正确使用方法</em><i>2016.01.01</i></a></li>
+							<li><a href="#"><span>精选</span><em>菲特云瑜伽运营管理系统的正确使用方法</em><i>2016.01.01</i></a></li>
+							<li><a href="#"><span>教程</span><em>菲特云瑜伽运营管理系统的正确使用方法</em><i>2016.01.01</i></a></li>
+							<li><a href="#"><span>教程</span><em>菲特云瑜伽运营管理系统的正确使用方法</em><i>2016.01.01</i></a></li>
+							<li><a href="#"><span>教程</span><em>菲特云瑜伽运营管理系统的正确使用方法</em><i>2016.01.01</i></a></li>
+							<li><a href="#"><span>教程</span><em>菲特云瑜伽运营管理系统的正确使用方法</em><i>2016.01.01</i></a></li>
+						</ul>
+						
+						<p class="p2"><span></span>热门文章</p>
+						<ul class="ul">
+							<li><a href="#"><span>教程</span><em>菲特云瑜伽运营管理系统的正确使用方法</em><i>2016.01.01</i></a></li>
+							<li><a href="#"><span>视频</span><em>菲特云瑜伽运营管理系统的正确使用方法</em><i>2016.01.01</i></a></li>
+							<li><a href="#"><span>营销</span><em>菲特云瑜伽运营管理系统的正确使用方法</em><i>2016.01.01</i></a></li>
+							<li><a href="#"><span>学习</span><em>菲特云瑜伽运营管理系统的正确使用方法</em><i>2016.01.01</i></a></li>
+							<li><a href="#"><span>精选</span><em>菲特云瑜伽运营管理系统的正确使用方法</em><i>2016.01.01</i></a></li>
+							<li><a href="#"><span>精选</span><em>菲特云瑜伽运营管理系统的正确使用方法</em><i>2016.01.01</i></a></li>
+							<li><a href="#"><span>教程</span><em>菲特云瑜伽运营管理系统的正确使用方法</em><i>2016.01.01</i></a></li>
+							<li><a href="#"><span>教程</span><em>菲特云瑜伽运营管理系统的正确使用方法</em><i>2016.01.01</i></a></li>
+							<li><a href="#"><span>教程</span><em>菲特云瑜伽运营管理系统的正确使用方法</em><i>2016.01.01</i></a></li>
+						</ul>
+						
+					</div>
+					
+					<style type="text/css">
+						.body_center_top{ margin-top: 10px; position: relative;}
+						.body_center_top img{ width: 100%;}
+						.bg{ width: 100%; background-color: #000000;    position: absolute; height: 35px; bottom: 5px; left: 0; z-index: 1; }
+						.body_center_top_p{ position: absolute; bottom: 5px; width: 100%; height: 35px; left: 0; z-index: 2; line-height: 35px; padding-left: 20px; font-size: 16px;  color: #FFFFFF;}
+					</style>
+					<div class="body_one  body_center">
+						<p class="p1">视频精选</p>
+						<div class="body_center_top">
+							<!--<video  class="video-js vjs-default-skin" title="菲特云运营管理系统教程"  width="445" height="300" poster="img/2.png" controls preload="none" data-setup="{}">
+							   <source src="video/1.mp4" type="video/mp4"  />
+							   <source src="video/movie.ogg"  type="video/ogg"/>
+							</video>-->
+							
+								<!--<video controls="controls" class="video-js vjs-default-skin"  preload="auto" data-setup = "{}"  style="width: 100%; height: auto;">
+									<source src="video/1.mp4" type="video/mp4"  />
+									<source src="video/movie.ogg"  type="video/ogg"/>
+									 你的浏览器不支持视频
+								</video>-->
+							<a href="javascript:;">
+								<img src="img/body_img2.png" class="tc"/>
+								<div class="bg opacity"></div>
+								<p class="body_center_top_p">菲特云运营管理系统教程</p>
+							</a>
+						</div>
+						<style type="text/css">
+							.body_center_bot{ margin-top: 15px; }
+							.body_center_bot_one{ width: 48%; position: relative; margin-bottom: 10px; }
+							.body_center_bot_one img{ width: 100%;}
+							.body_center_bot_one .bg{ height: 25px;}
+							.body_center_bot_one .body_center_top_p{  height: 25px; line-height: 25px;}
+							.left{ float: left;}
+							.right{ float: right;}
+							.studay_time{ position: absolute;  width: 100%; top: 0; left: 0; height: 25px; color: #FFFFFF; line-height: 25px; padding-left: 10px; background-image: url(img/studay_time-img.png); background-repeat: no-repeat; background-position: 0 0; }
+							
+							/*弹出视频*/
+							#gray{width:100%; background-color: #000000; height:100%;position:fixed;top:0px; left: 0; display:none;z-index:99;}
+							.popup{width:700px;  height:auto;background-color:#fff;position:absolute; position: fixed; z-index:100;border:1px solid #ebeaea;left:400px;top:96px;display:none;}
+							.popup_title{ height: 30px; line-height: 30px; background-color: #EFEFEF;}
+							.popup_title p{ padding-left: 15px; font-size: 14px;  color: #666;}
+						</style>
+						<!--弹出视频start-->
+						<div id="gray" class="opacity"></div>
+						<div class="popup" id="popup">
+							<div class="popup_title top_nav">
+								<p>最新教学视频</p>
+							</div>
+							<div  id='top_nav'>
+								<video class="video-js vjs-default-skin" title="菲特云运营管理系统教程"  controls="controls" poster="img/2.png" controls preload="none" data-setup="{}" preload="auto"  width="700" height="500" >
+									<source src="video/1.mp4" type="video/mp4"  />
+									<source src="video/123.ogg"  type="video/ogg"/>
+									 你的浏览器不支持视频
+								</video>
+							</div>
+						</div>
+						<!--弹出视频over-->
+						<!--学习时刻-->
+						<div class="body_center_bot">
+							<div class="body_center_bot_one left">
+								<a href="javascript:;" >
+									<img src="img/body_img3.png" class="tc"/>
+									<p class="studay_time">学习时刻</p>
+									<div class="bg opacity"></div>
+									<p class="body_center_top_p">菲特云最新视频教程</p>
+								</a>
+							</div>
+							<div class="body_center_bot_one right">
+								<a href="javascript:;">
+									<img src="img/body_img4.png"/>
+									<p class="studay_time">学习时刻</p>
+									<div class="bg opacity"></div>
+									<p class="body_center_top_p">菲特云最新视频教程</p>
+								</a>
+							</div>
+							<div class="body_center_bot_one left">
+								<a href="javascript:;">
+									<img src="img/body_img5.png"/>
+									<p class="studay_time">学习时刻</p>
+									<div class="bg opacity"></div>
+									<p class="body_center_top_p">菲特云最新视频教程</p>
+								</a>
+							</div>
+							<div class="body_center_bot_one right">
+								<a href="javascript:;">
+									<img src="img/body_img6.png"/>
+									<p class="studay_time">学习时刻</p>
+									<div class="bg opacity"></div>
+									<p class="body_center_top_p">菲特云最新视频教程</p>
+								</a>
+							</div>
+							<div class="body_center_bot_one left">
+								<a href="javascript:;">
+									<img src="img/body_img7.png"/>
+									<p class="studay_time">学习时刻</p>
+									<div class="bg opacity"></div>
+									<p class="body_center_top_p">菲特云最新视频教程</p>
+								</a>
+							</div>
+							<div class="body_center_bot_one right">
+								<a href="javascript:;">
+									<img src="img/body_img8.png"/>
+									<p class="studay_time">学习时刻</p>
+									<div class="bg opacity"></div>
+									<p class="body_center_top_p">菲特云最新视频教程</p>
+								</a>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						
+						
+					</div>
+					<!--问答排行-->
+					<style type="text/css">
+						.body_right .ul span{ display: inline-block; width: 33px; position: relative;top: -2px; height: 27px; background-color: #c1c1c1; color: #FFFFFF; text-align: center; line-height: 27px;}
+						.body_right .ul li em{ font-style: normal; font-size: 14px; white-space: nowrap; width: 260px; position:relative; top:2px; overflow: hidden; text-overflow: ellipsis; display: inline-block; }
+						.body_right .ul li{  padding-bottom: 3px; border-bottom: #f0f0f0 solid 1px; margin-top: 0px; }
+						.top3{ background-color: #258ee7!important;} 
+					</style>
+					<div class="body_one body_right">
+						<p class="p2"><span></span>问答排行</p>
+						<ul class="ul">
+							<li><a href="#"><span class="top3">01</span><em>菲特云瑜伽运营管理系统的正确使用方法</em></a></li>
+							<li><a href="#"><span class="top3">02</span><em>菲特云瑜伽运营管理系统的正确使用方法</em></a></li>
+							<li><a href="#"><span class="top3">03</span><em>菲特云瑜伽运营管理系统的正确使用方法</em></a></li>
+							<li><a href="#"><span>04</span><em>菲特云瑜伽运营管理系统的正确使用方法</em></a></li>
+							<li><a href="#"><span>05</span><em>菲特云瑜伽运营管理系统的正确使用方法</em></a></li>
+							<li><a href="#"><span>06</span><em>菲特云瑜伽运营管理系统的正确使用方法</em></a></li>
+							<li><a href="#"><span>07</span><em>菲特云瑜伽运营管理系统的正确使用方法</em></a></li>
+							<li><a href="#"><span>08</span><em>菲特云瑜伽运营管理系统的正确使用方法</em></a></li>
+							<li><a href="#"><span>09</span><em>菲特云瑜伽运营管理系统的正确使用方法</em></a></li>
+						</ul>
+						<p class="p2"><span></span>问答精选</p>
+						<ul class="ul">
+							<li><a href="#"><span class="top3">01</span><em>菲特云瑜伽运营管理系统的正确使用方法</em></a></li>
+							<li><a href="#"><span class="top3">02</span><em>菲特云瑜伽运营管理系统的正确使用方法</em></a></li>
+							<li><a href="#"><span class="top3">03</span><em>菲特云瑜伽运营管理系统的正确使用方法</em></a></li>
+							<li><a href="#"><span>04</span><em>菲特云瑜伽运营管理系统的正确使用方法</em></a></li>
+							<li><a href="#"><span>05</span><em>菲特云瑜伽运营管理系统的正确使用方法</em></a></li>
+							<li><a href="#"><span>06</span><em>菲特云瑜伽运营管理系统的正确使用方法</em></a></li>
+							<li><a href="#"><span>07</span><em>菲特云瑜伽运营管理系统的正确使用方法</em></a></li>
+							<li><a href="#"><span>08</span><em>菲特云瑜伽运营管理系统的正确使用方法</em></a></li>
+						</ul>
+						<!--<p class="p2"><span></span>问答热门</p>
+						<ul class="ul">
+							<li><a href="#"><span class="top3">01</span><em>菲特云瑜伽运营管理系统的正确使用方法</em></a></li>
+							<li><a href="#"><span class="top3">02</span><em>菲特云瑜伽运营管理系统的正确使用方法</em></a></li>
+							<li><a href="#"><span class="top3">03</span><em>菲特云瑜伽运营管理系统的正确使用方法</em></a></li>
+							<li><a href="#"><span>04</span><em>菲特云瑜伽运营管理系统的正确使用方法</em></a></li>
+							<li><a href="#"><span>05</span><em>菲特云瑜伽运营管理系统的正确使用方法</em></a></li>
+						</ul>-->
+					</div>
+				</div>
+			</div>
+			<!--body over-->
+		</div>
+		<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="js/Marquee.js"></script>
+		<script type="text/javascript">
+			//一次滚动一屏
+			$('#marquee5').kxbdSuperMarquee({
+				isEqual:false,
+				distance:25,
+				time:3,
+				direction:'up'
+			});
+			//窗口效果
+			//点击登录class为tc 显示
+			$(".tc").click(function(){
+			//	window.scroll(0,0);
+				$("#gray").show();
+				$("#popup").show();//查找ID为popup的DIV show()显示#gray
+				tc_center();
+			});
+			//点击关闭按钮
+			$("#gray").click(function(){
+				$("#gray").hide();
+				$("#popup").hide();//查找ID为popup的DIV hide()隐藏
+			})
+			//窗口水平居中
+			$(window).resize(function(){
+				tc_center();
+			});
+			function tc_center(){
+				var _top=($(window).height()-$(".popup").height())/2;
+				var _left=($(window).width()-$(".popup").width())/2;
+				$(".popup").css({top:_top,left:_left});
+			}	
+		</script>
+
+		<script type="text/javascript">
+//		$(document).ready(function(){ 
+//			$(".top_nav").mousedown(function(e){ 
+//				$(this).css("cursor","move");//改变鼠标指针的形状 
+//				var offset = $(this).offset();//DIV在页面的位置 
+//				var x = e.pageX - offset.left;//获得鼠标指针离DIV元素左边界的距离 
+//				var y = e.pageY - offset.top;//获得鼠标指针离DIV元素上边界的距离 
+//				$(document).bind("mousemove",function(ev){ //绑定鼠标的移动事件，因为光标在DIV元素外面也要有效果，所以要用doucment的事件，而不用DIV元素的事件 
+//					$(".popup").stop();//加上这个之后 
+//					var _x = ev.pageX - x;//获得X轴方向移动的值 
+//					var _y = ev.pageY - y;//获得Y轴方向移动的值 
+//					$(".popup").animate({left:_x+"px",top:_y+"px"},10); 
+//				}); 
+//			}); 
+//			$(document).mouseup(function() { 
+//				$(".popup").css("cursor","default"); 
+//				$(this).unbind("mousemove"); 
+//			});
+//		}) 
+		</script>
+			
+	</body>
+</html>
